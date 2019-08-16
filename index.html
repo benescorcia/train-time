@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+       crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+       integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+       crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+       crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/assest/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">     
+            <div class="col-md-12">
+                <div class="jumbotron">
+                        <h1 class="display-4">Train Schedule</h1>
+                        <p class="lead">Please don't be late.</p>
+                </div>
+            </div>
+        </div>
+​
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table border border-primary">
+                    <thead class="border border-primary">
+                        <tr>
+                            <td colspan="5"class="bg-primary text-light font-weight-bold rounded-top">Current Train Schedule</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">Train</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Frequency(min)</th>
+                            <th scope="col">Next Arrival</th>
+                            <th scope="col">Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody class="trainbodyData" id="train-table">
+                        <tr>
+                            <td id="trainNameDisplay"></td>
+                            <td id="destinationDisplay"></td>
+                            <td id="frequencyDisplay"></td>
+                            <td id="nextArrivalDisplay"></td>
+                            <td id="minutesAwayDisplays"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col-md-12">
+                <form class="mt-5 border border-primaryp-3 mb-2 rounded-top">
+                    <div class="form-group text-white p-2 bg-primary rounded-top">
+                        <label class="font-weight-bold" for="trainName">Add Train</label>
+                    </div>
+                    <div class="form-group px-2 my-1">
+                        <label class="font-weight-bold" for="trainName">Train Name</label>
+                        <input type="text" class="form-control" id="trainName" aria-describedby="train name" placeholder="Train Name">
+                    </div>
+                    <div class="form-group p-2 my-1">
+                        <label class="font-weight-bold" for="destination">Destination</label>
+                        <input type="text" class="form-control" id="destination" aria-describedby="Destination" placeholder="Destination">
+                    </div>
+                    <div class="form-group p-2 my-1">
+                        <label class="font-weight-bold" for="firstTrain">First Train Time (HH:mm - military time)</label>
+                        <input type="text" class="form-control" id="firstTrain" aria-describedby="first Train" >
+                    </div>
+                    <div class="form-group p-2 my-1">
+                        <label class="font-weight-bold" for="frequency">Frequency (min)</label>
+                        <input type="text" class="form-control" id="frequency" aria-describedby="frequency">
+                    </div>
+                    <button type="submit" id="submit" class="btn btn-primary mb-2 ml-2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js" integrity="sha256-H9jAz//QLkDOy/nzE9G4aYijQtkLt9FvGmdUTwBk6gs=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/localforage/1.7.3/localforage.min.js" integrity="sha256-H/ZsHjKSJUnQyCQHZwPmn7VTWFeTTI+qgCP1GkiB9zI=" crossorigin="anonymous"></script>
+    <script src="assest/javascript.js"></script>
+</body>
+</html>
